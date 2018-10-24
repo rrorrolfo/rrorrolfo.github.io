@@ -154,7 +154,6 @@ nav li {
 
 /******** BACKGROUND LOGO **********/
 #back_container {
-    border: 1px solid blue;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -170,21 +169,7 @@ nav li {
 /******** WELCOME MESSAGE **********/
 
 #welcome {
-    margin: 100px 0 0 40px;
-}
-
-#main_logo {
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+    margin: 100px 0 0 30px;
 }
 
 #welcome h1 {
@@ -218,7 +203,7 @@ nav li {
 
 
 #about_me {
-    padding: 40px;
+    padding: 35px;
 }
 
 #about_me h1 {
@@ -250,7 +235,65 @@ nav li {
     color: var(--yellow-brand);
 }
 
-#testy {
-    width: 100px;
-    height: 100px;
+
+.skills_wrap {
+	perspective: 800px;
+    perspective-origin: 50% 100px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.skills {
+	position: relative;
+	width: 200px;
+	transform-style: preserve-3d;
+}
+
+.skills div {
+	position: absolute;
+	width: 200px;
+    height: 200px;
+    text-align: center;
+    border: 2px solid #000;
+    background-color: #1f1e1ec7;
+   box-shadow: inset 0 0 50px 20px #000;
+}
+
+.skills p {
+    margin-top: 40%;
+    color: var(--yellow-brand);
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
+
+.back {
+	transform: translateZ(-100px) rotateY(180deg);
+}
+.right {
+	transform: rotateY(-270deg) translateX(100px);
+	transform-origin: top right;
+}
+.left {
+	transform: rotateY(270deg) translateX(-100px);
+	transform-origin: center left;
+}
+.top {
+	transform: rotateX(-90deg) translateY(-100px);
+	transform-origin: top center;
+}
+.bottom {
+	transform: rotateX(90deg) translateY(100px);
+	transform-origin: bottom center;
+}
+.front {
+	transform: translateZ(100px);
+}
+
+@keyframes spin {
+	from { transform: rotateY(0); }
+	to { transform: rotateY(360deg); }
+}
+
+.skills {
+	animation: spin 8s infinite linear;
 }
