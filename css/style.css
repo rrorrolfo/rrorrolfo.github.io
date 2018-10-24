@@ -150,8 +150,23 @@ nav li {
 }
 
 /******** WELCOME MESSAGE **********/
+
 #welcome {
     margin: 100px 0 0 40px;
+}
+
+#main_logo {
+    background-image: url(../img/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }
 
 #welcome h1 {
@@ -179,4 +194,40 @@ nav li {
 #main_cta:hover {
     background-color: var(--yellow-brand);
     color: var(--light-black);
+}
+
+/******** ABOUT SECTION **********/
+
+
+#about_me {
+    padding: 40px;
+}
+
+#about_me h1 {
+    color: var(--yellow-brand);
+    font-size: 2.5em;
+}
+
+#about_me p {
+    color: var(--white-color);
+}
+
+#portrait {
+    width: 150px;
+    height: 150px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+#my_map {
+    width: 100%;
+    height: 30%;
+}
+
+#about_me #world {
+    margin-bottom: 5px;
+    color: var(--yellow-brand);
 }
