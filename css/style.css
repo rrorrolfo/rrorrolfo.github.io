@@ -1,0 +1,182 @@
+ /******** COLORS **********/
+
+ :root {
+     --black-color: #444;
+     --light-black: #181818;
+     --white-color: rgb(243, 241, 241);
+     --yellow-brand: #fffb32;
+ }
+
+ /******** GENERAL **********/
+ 
+ body {
+     background-color: var(--black-color);
+ }
+
+ header,
+ nav {
+     background-color: var(--light-black);
+ }
+
+ * {
+    font-family: 'Source Code Pro', monospace;
+ }
+ 
+
+ /******** HEADER **********/
+
+ header {
+    display: flex;
+    justify-content: space-between;
+}
+
+ #logo {
+     height: 60px;
+     width: 60px;
+ }
+
+ #navicon {
+     width: 30px;
+    margin: 15px 15px
+ }
+ 
+ #navicon {
+     fill: var(--white-color);
+ }
+
+ #navicon:hover {
+    fill: var(--yellow-brand);
+ }
+
+
+
+ /******** NAVIGATOR **********/
+
+nav {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    display: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0; 
+}
+
+nav li {
+    position: relative;
+    width: 20%;
+    height: 60px;
+    text-align: center;
+}
+
+/******** NAVIGATOR ICONS **********/
+
+.nav_icon {
+    width: 25px;
+    height: 25px;
+}
+
+.nav_icon path {
+    fill: rgb(131, 131, 131);
+}
+
+.home {
+    width: 23px;
+    height: 23px;
+    padding-top: 17px;
+}
+
+.med_icon {
+    width: 28px;
+    height: 30px;
+    padding-top: 9px;
+
+}
+
+.user {
+    width: 27px;
+    height: 27px;
+    padding-top: 15px;
+}
+
+.gear {
+    width: 38px;
+    height: 38px;
+    padding-top: 9px;
+}
+
+.gear circle{
+    fill: var(--light-black);
+}
+
+.mon_icon {
+    width: 31px;
+    height: 31px;
+    padding-top: 14px;
+}
+
+.nav_overlay {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    font-size: .70rem;
+    color: var(--yellow-brand);
+    background-color: var(--light-black);
+    opacity: 0;
+    transform: opacity;
+}
+
+.nav_overlay p {
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.nav_overlay:hover {
+    opacity: 1;
+    transition: .5s;
+}
+
+.current path{
+    fill: var(--yellow-brand);
+    border: 1px solid red;
+}
+
+/******** WELCOME MESSAGE **********/
+#welcome {
+    margin: 100px 0 0 40px;
+}
+
+#welcome h1 {
+    color: #FFF;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+#welcome h2 {
+    color: rgb(148, 143, 143);
+    font-size: .8rem;
+    margin-bottom: 40px;
+}
+
+#main_cta {
+    border: 1px solid var(--yellow-brand);
+    background-color: var(--black-color);
+    color: var(--yellow-brand);
+    padding: 8px 15px;
+    border-radius: 2.5px;
+    letter-spacing: 3px;
+    font-size: .75rem;
+}
+
+#main_cta:hover {
+    background-color: var(--yellow-brand);
+    color: var(--light-black);
+}
