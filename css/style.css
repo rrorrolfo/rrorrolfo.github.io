@@ -368,8 +368,10 @@ nav li {
 }
 
 .project_container {
-    margin-bottom: 30px;
-    
+    width: 50%;
+    margin: 0 auto 30px;
+    border-radius: 10px;
+    box-shadow: 4px 2px 5px var(--light-black);
 }
 
 .project_container:first-child {
@@ -377,12 +379,11 @@ nav li {
 }
 
 .project {
-    width: 60%;
     margin: 0 auto;
     margin-bottom: -5px;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius:10px 10px 0 0;
 }
 
 .project img {
@@ -406,7 +407,7 @@ nav li {
     padding: 10px 20px;
 }
 
-.project:hover img {
+.project_container:hover img {
     transform: scale(1.1);
 }
 
@@ -415,39 +416,41 @@ nav li {
 }
 
 .project_container h3 {
-    margin: 5px 0;
+    margin: 5px 0 10px;
+    font-size: 1rem;
 }
 
 .project_overlay h4 {
-    margin: 10px;
+    margin: 5px;
 }
 
 .project_overlay p {
     color: var(--white-color);
     margin-bottom: auto;
+    margin-top: 5px;
 }
 
 .project_overlay button {
     width: 70%;
-    height: 60px;
+    height: 40px;
     border-radius: 5px;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
     padding: 10px;
     background-color: var(--yellow-brand);
     color: var(--light-black);
     font-weight: 600;
     border: none;
+    font-size: .8rem;
     box-shadow: 0 0 10px 5px; 
 }
 
 .project_details {
     color: var(--white-color);
-    width: 60%;
     margin: 0 auto;
     background-color: var(--light-black);
     padding: 5px 20px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
 }
 
 /* Tags decoration*/
@@ -461,6 +464,7 @@ nav li {
     padding: 5px;
     display: inline-block;
     font-size: .8rem;
+    margin: 2px 2px 5px;
 }
 
 .html_tag {
