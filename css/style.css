@@ -174,7 +174,7 @@ nav li {
 
 #welcome h1 {
     color: #FFF;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     margin-bottom: 0;
 }
 
@@ -211,7 +211,8 @@ nav li {
     font-size: 2.5em;
 }
 
-#about_me p {
+#about_me p,
+#skills_text p {
     color: var(--white-color);
 }
 
@@ -235,6 +236,37 @@ nav li {
     color: var(--yellow-brand);
 }
 
+/******** SKILLS SECTION **********/
+
+#skills_text {
+    margin: 30px;
+    padding-bottom: 30px;
+    color: var(--yellow-brand);
+}
+
+#skills_text span {
+    font-weight: 600;
+}
+
+.html {
+    color: rgb(219, 124, 0);
+}
+
+.css {
+    color: rgb(0, 98, 155);
+}
+
+.js {
+    color: rgb(177, 53, 53);
+}
+
+.sass {
+    color: rgb(226, 0, 106);
+}
+
+.wp {
+    color: #fff;
+}
 
 .skills_wrap {
 	perspective: 800px;
@@ -255,13 +287,13 @@ nav li {
     height: 200px;
     text-align: center;
     border: 2px solid #000;
-    background-color: #1f1e1ec7;
+    background-color: #1f1e1ef3;
    box-shadow: inset 0 0 50px 20px #000;
 }
 
 .skills p {
     margin-top: 40%;
-    color: var(--yellow-brand);
+
     font-size: 1.5rem;
     letter-spacing: 1.5px;
 }
@@ -297,3 +329,29 @@ nav li {
 .skills {
 	animation: spin 8s infinite linear;
 }
+
+/* 
+@keyframes spin-vertical {
+	from { transform: rotateX(0); }
+	to { transform: rotateX(-360deg); }
+}
+
+.cube-wrap.vertical .cube {
+	margin: 0 auto;
+
+	transform-origin: 0 100px;
+	animation: spin-vertical 5s infinite linear;
+}
+
+.cube-wrap.vertical .top {
+	transform: rotateX(-270deg) translateY(-100px);
+}
+
+.cube-wrap.vertical .back {
+	transform: translateZ(-100px) rotateX(180deg);
+}
+
+.cube-wrap.vertical .bottom {
+	transform: rotateX(-90deg) translateY(100px);
+}
+ */
