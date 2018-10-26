@@ -31,6 +31,17 @@
      text-decoration: none;
  }
 
+ button {
+    border: 1px solid var(--yellow-brand);
+    color: var(--yellow-brand);
+ }
+
+ button:focus,
+ input,
+ textarea:focus {
+    outline: none;
+ }
+
  /******** HEADER **********/
 
  header {
@@ -68,6 +79,7 @@ nav {
     top: 60px;
     width: 100%;
     display: none;
+    z-index: 10;
 }
 
 nav ul {
@@ -201,7 +213,8 @@ nav li {
     font-size: .75rem;
 }
 
-#main_cta:hover {
+#main_cta:hover,
+#submit:hover {
     background-color: var(--yellow-brand);
     color: var(--light-black);
 }
@@ -378,7 +391,7 @@ nav li {
 }
 
 .project_container:first-child {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .project {
@@ -428,11 +441,12 @@ nav li {
 }
 
 .project_overlay p {
-    color: var(--white-color);
+    color: var(--yellow-brand);
     margin-bottom: auto;
     margin-top: 5px;
     font-size: .9rem;
-    text-align: left;
+    letter-spacing: 1.5px;
+    
 }
 
 .side-b button {
@@ -442,11 +456,9 @@ nav li {
     border-radius: 5px;
     margin: 0 auto;
     padding: 5px;
-    color: var(--yellow-brand);
-    background-color: var(--light-black);
     font-weight: 600;
-    border: 1px solid var(--yellow-brand);
     font-size: .8rem;
+    background-color: var(--light-black);
 }
 
 .project_details {
@@ -501,7 +513,7 @@ nav li {
 
 .cta_container .project_details {
     position: relative;
-   z-index: 100;
+   z-index: 2;
 }
 
 .turning_div {
@@ -520,6 +532,7 @@ nav li {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    border-radius: 0 0 5px 5px;
 }
 
 .project_container:hover .turning_div{
@@ -533,4 +546,92 @@ nav li {
 
 .side-b {
     transform: rotateY(180deg);
+}
+
+/******* CONTACT FORM *******/
+
+#contact_title {
+    color: var(--yellow-brand);
+    margin: 25px 8%
+}
+
+#contact_form {
+    width: 85%;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    color: var(--white-color);
+    font-size: .85rem;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+#contact_form input{
+    height: 50px;
+}
+
+textarea,
+#contact_form input {
+    padding: 5px;
+}
+
+#message,
+#contact_form input {
+    width: 100%;
+    margin: 5px 0;
+    background-color: var(--light-black);
+    border: none;
+    color: var(--white-color);
+    border-radius: 2.5px;
+}
+
+#contact_form input:focus,
+#message:focus {
+    border-bottom: 2px solid var(--yellow-brand);
+}
+
+input[placeholder]::placeholder,
+textarea::placeholder {
+    padding-left: 10px;
+}
+
+#submit {
+    background-color: var(--black-color);
+    padding: 5px 10px;
+    letter-spacing: 1.5px;
+    border-radius: 2.5px;
+    margin-left: 75%;
+}
+
+#contact_data {
+    width: 80%;
+    margin: 20px auto;
+    background-color: var(--light-black);
+    color: var(--white-color);
+}
+
+#contact_info {
+    padding: 15px;
+}
+
+#contact_info span {
+    color: var(--yellow-brand);
+    font-size: 1.25rem;
+}
+
+#contact_info p:not(:last-child) {
+    margin: 5px 0; 
+    
+}
+
+#contact_info p {
+    font-size: .85rem;
 }
