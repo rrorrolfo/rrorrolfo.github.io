@@ -1,0 +1,42 @@
+
+/** FONT STYLES **************/
+
+$general-font: 'Montserrat', sans-serif;
+
+$average-weight:400;
+$heavy:500;
+$bold: 800;
+
+/** ** COLORS **********/
+
+$black: #000;
+$blue: rgb(103, 184, 216);
+$green: rgb(131, 199, 151);
+$white: #fff;
+$dark-grey: rgb(133, 130, 130);
+$red: rgb(236, 122, 122);
+$orange: rgb(214, 127, 46);
+$purple: rgb(189, 169, 184);
+$light-green: rgb(169, 247, 195);
+$light-blue: rgb(165, 220, 241);
+$light-red: rgb(253, 160, 160);
+$light-orange: rgb(245, 171, 102);
+
+
+/**   FONT SIZES   ***********/
+
+$small: 1rem;
+$normal: 1.1rem;
+$big: 1.5rem;
+
+
+/****  GUTTERS  ************/
+
+$small-gut: 10px;
+$standard: 25px;
+$large-gut: 50px;
+
+
+/*****  Breakpoints ************/
+
+$desktop: 1400px;

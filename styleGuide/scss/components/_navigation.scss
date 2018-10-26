@@ -1,0 +1,26 @@
+
+.nav__item {
+
+    a{
+        font-size: $small;
+        padding: 10px 0;
+        @extend %display-content;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: $heavy;
+        color: $dark-grey;
+
+        @include visited($dark-grey);
+    
+        &:hover {
+            background-color: $green;
+            color: $white;
+        }
+    }
+
+    @include media2 {
+        a {
+            padding: 10px;
+        }
+    }
+}

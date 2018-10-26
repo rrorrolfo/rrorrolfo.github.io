@@ -1,0 +1,21 @@
+.form {
+    text-align: center;
+}
+
+.form__label--hidden{
+    display: none;
+}
+
+
+.form__input {
+    width: 90%;
+    padding: $small-gut;
+    margin: 20px auto;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid $green;
+    @extend %display-content;
+    font-weight: $bold;
+    font-size: .8rem;
+}

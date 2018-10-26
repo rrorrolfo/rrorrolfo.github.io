@@ -1,0 +1,22 @@
+.img--logo {
+    @extend %display-content;
+    margin:  0 auto;
+
+    @include media2 {
+        margin: 0 auto 0 0;
+    }
+}
+
+.img--frame {
+    border: 1px solid $dark-grey;
+    padding: $small-gut;
+    max-width: 100%;
+}
+
+.img--avatar {
+    @extend %display-content;
+    margin: $standard auto 0;
+    @include media2 {
+        margin-top: $small-gut;
+    }
+}

@@ -1,0 +1,10 @@
+ul {
+    list-style: none;
+    @extend %content-centered;
+}
+
+p {
+    margin: $small-gut 0;
+    line-height: 1.35;
+    @extend %content-to-left;
+}

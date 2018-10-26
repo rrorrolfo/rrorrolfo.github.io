@@ -1,0 +1,49 @@
+@mixin center_container ($wd){
+    width: $wd;
+    margin: 0 auto;
+}
+
+@mixin flexbox {
+    display:flex;
+    flex-wrap:wrap;
+    @content
+}
+
+@mixin visited ($color){
+    &:visited {
+        color: $color;
+    }
+}
+
+@mixin button ($back-color){
+    width: 100%;
+    background-color: $back-color;
+    padding: $small-gut 0;
+    border-radius: 5px;
+    border: none;
+    color: $white;
+    font-weight: $heavy;
+    margin: $small-gut 0;
+}
+
+@mixin grid ($back-color){
+    margin-top: $small-gut;
+    font-size: .9rem;
+    padding: 13.5px;
+    font-weight: $heavy;
+    border-radius: 5px;
+    background-color: $back-color;
+}
+
+@mixin media2 (
+    $num: null,
+    $align: null,
+    $just: null) 
+    {
+    @media(min-width: $desktop) {
+        flex-basis: $num;
+        text-align: $align;
+        justify-content: $just;
+        @content;
+    }
+}

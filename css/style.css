@@ -27,6 +27,9 @@
     box-sizing: border-box;
  }
  
+ a {
+     text-decoration: none;
+ }
 
  /******** HEADER **********/
 
@@ -375,7 +378,7 @@ nav li {
 }
 
 .project_container:first-child {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .project {
@@ -398,20 +401,20 @@ nav li {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #18181880;
+    background-color: rgba(24, 24, 24, 0.801);
     opacity: 0;
     transition: opacity .6s;
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 10px 20px;
+    padding: 5px 15px;
 }
 
 .project_container:hover img {
     transform: scale(1.1);
 }
 
-.project_overlay:hover {
+.project_container:hover .project_overlay {
     opacity: 1;
 }
 
@@ -428,32 +431,34 @@ nav li {
     color: var(--white-color);
     margin-bottom: auto;
     margin-top: 5px;
+    font-size: .9rem;
+    text-align: left;
 }
 
-.project_overlay button {
-    width: 70%;
+.side-b button {
+    display: block;
+    width: 90%;
     height: 40px;
     border-radius: 5px;
-    margin: 0 auto 10px;
-    padding: 10px;
-    background-color: var(--yellow-brand);
-    color: var(--light-black);
+    margin: 0 auto;
+    padding: 5px;
+    color: var(--yellow-brand);
+    background-color: var(--light-black);
     font-weight: 600;
-    border: none;
+    border: 1px solid var(--yellow-brand);
     font-size: .8rem;
-    box-shadow: 0 0 10px 5px; 
 }
 
 .project_details {
     color: var(--white-color);
     margin: 0 auto;
     background-color: var(--light-black);
-    padding: 5px 20px;
+    padding: 5px 10px;
     text-align: center;
     border-radius: 0 0 10px 10px;
 }
 
-/* Tags decoration*/
+/******* Tags decoration *******/
 
 .html_tag,
 .css_tag,
@@ -485,4 +490,47 @@ nav li {
 .sass_tag {
     border-color: var(--sass-color);
     color: var(--sass-color);
+}
+
+/******* 3D FLPPING CTA *******/
+
+
+.project_container {
+    perspective: 700px;
+}
+
+.cta_container .project_details {
+    position: relative;
+   z-index: 100;
+}
+
+.turning_div {
+	position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(.55, -.62, .27, 1.2);
+}
+
+.cta_project {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0; 
+	left: 0;
+    background: var(--light-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.project_container:hover .turning_div{
+    transform: rotateY(-180deg);
+}
+
+.side-a,
+.side-b {
+    backface-visibility: hidden;
+}
+
+.side-b {
+    transform: rotateY(180deg);
 }

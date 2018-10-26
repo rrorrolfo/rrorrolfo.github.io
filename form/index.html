@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Newsletter form</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    
+  </head>
+
+  <body>
+
+    <header>
+      <h1>THE CODE REVIEW</h1>
+    </header>
+
+    <main>
+
+      <div id="intro">
+        <h2>Sign up for our newsletter</h2>
+        <p>Get the latest news on how your code is doing right in your inbox.</p>
+      </div>
+
+      <form>
+
+        <fieldset id="contact_info">
+
+          <legend>Contact Information</legend>
+
+          <div class="input_wrapper">
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="user_name" placeholder="Required" required>
+          </div>
+
+          <diV class="input_wrapper">
+            <label for="user_email">Email Address</label>
+            <input type="email" id="user_email" name="user_email" placeholder="Required" required>
+          </diV>
+
+          <div class="input_wrapper">
+            <label for="phone_number">Phone number</label>
+            <input type="tel" id="phone_number" name="phone_number" placeholder="e.g. +56 8434 543 23">
+          </div>
+
+          <div class="input_wrapper">
+            <label for="address">Street Address</label>
+            <input type="text" id="address" name="address" placeholder="Street and house number are required">
+          </div>
+
+          <div class="input_wrapper">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="e.g. Los Angeles">
+          </div>
+
+          <div class="input_wrapper">
+          <label for="state">State</label>
+            <select id="state">
+              <option value="">Choose State</option>
+              <option value="california">California</option>
+              <option value="luisiana">Luisiana</option>
+              <option value="nevada">Nevada</option>
+              <option value="new_mexico">New Mexico</option>
+            </select>
+          </div>
+
+          <div class="input_wrapper">
+            <label for="zip_code">Zip Code</label>
+            <input type="text" id="zip_code" name="zip_code" placeholder="e.g. 04677">
+          </div>
+
+        </fieldset>
+
+        <fieldset id="newsletter">
+
+          <legend>Newsletter</legend>
+
+          <label id="news_topic">Select the newsletters you would like to receive:</label><br>
+
+          <input type="checkbox" id="ht_news" value="html_news" name="type_of_newsletter"><label for="ht_news">HTML News</label><br>
+
+          <input type="checkbox" id="cs_news" value="css_news" name="type_of_newsletter"><label for="cs_news">CSS News</label><br>
+
+          <input type="checkbox" id="js_news" value="js_news" name="type_of_newsletter"><label for="js_news">Javascript News</label><br>
+
+          <label id="news_format">Newsletter format</label>
+
+          <input type="radio" id="ht_format" value="html_format" name="newsletter_format"><label for="ht_format">HTML</label><br>
+
+          <input type="radio" id="text_format" value="text_format" name="newsletter_format"><label for="text_format">Plain text</label>
+
+          <label for="topics" id="ll_topics">Other topics you´d would like to hear about</label>
+          <textarea id="topics" name="other_topics"></textarea>
+        </fieldset>
+      
+        <button type="submit" id="submit">Sign Up</button>
+      </form>
+
+    </main>
+
+    <footer>
+      <p>Copyright The Code Review</p>
+    </footer>
+
+  </body>
+</html>

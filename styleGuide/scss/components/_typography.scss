@@ -1,0 +1,48 @@
+.container {
+    font-family: $general-font;
+    text-align: center;
+    color: $dark-grey;
+    @include center_container (80%)
+}
+
+.link {
+    color: $blue;
+    text-decoration: none;
+    font-weight: $heavy;
+
+    @include visited ($blue);
+}
+
+.headline--primary {
+    font-size: 1.7rem;
+    width: 60%;
+    color: $green;
+    margin-left: 40px;
+
+    @include media2($align: left) {
+        width: 100%;
+    }
+}
+
+.headline--secondary {
+    text-align: left;
+    font-weight: $average-weight;
+    font-size: $small;
+    margin-top: $large-gut;
+    margin-bottom: $small-gut;
+}
+
+.blockquote {
+    font-size: $big;
+    font-style: italic;
+    padding: 0 15px;
+    border-left: 5px solid $green;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    @include media2 {
+        margin-right: 0;
+        margin-left: 20px;
+        padding-right: 0;
+    }
+}

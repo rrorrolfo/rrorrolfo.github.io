@@ -1,0 +1,22 @@
+.btn--default {
+    @include button($blue);
+    
+}
+
+.btn--success{
+    @include button($green);
+    
+}
+
+.btn--error{
+    @include button($red);
+    
+}
+.btn--warning{
+    @include button($orange);
+    
+}
+.btn--info{
+    @include button($purple);
+    
+}

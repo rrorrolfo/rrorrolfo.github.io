@@ -1,0 +1,211 @@
+/********** GENERAL  *************/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Oxygen Mono', monospace;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 1.25rem;
+}
+
+/********** HEADER *************/
+
+header {
+    background-color: #000;
+    color: #fff;
+}
+
+/********** SEARCH INPUT *************/
+
+#search {
+    margin: 20px;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+#search_employee {
+    margin: 15px 0;
+    height: 35px;
+    width: 40%;
+}
+
+label {
+    display: block;
+}
+
+#search_employee::placeholder {
+    padding-left: 10px;
+}
+
+/********** DIRECTORY *************/
+
+#directory {
+    padding: 20px;
+    background-image: url(../img/agsquare.png);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+.card {
+    margin: 20px 0;
+    display: flex;
+    background-color: #fff;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+}
+
+.card img,
+.modal_card img {
+    width: 100px;
+    height: 100px;
+    margin: 25px 25px;
+    border-radius: 50%;
+}
+
+.card h3 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.card p,
+.modal_card p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgb(131, 125, 125);
+}
+
+.card_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.card_overlay:hover {
+    background-color: rgba(248, 248, 248, .35);
+}
+
+
+
+/********** MODAL *************/
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.modal_card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 325px;
+    height: 420px;
+    margin: 15% auto;
+    background-color: #fff;
+    z-index: 3;
+    text-align: center;
+    padding: 15px 25px;
+}
+
+.left_arrow,
+.right_arrow,
+.close_modal {
+    position: absolute;
+}
+
+.modal_card .left_arrow,
+.modal_card .right_arrow {
+    font-size: 3rem;
+    padding: 10px;
+    top: 40%;
+    color:rgb(250, 245, 245);
+    border-radius: 5px;
+}
+
+.left_arrow:hover,
+.right_arrow:hover {
+    background-color: rgba(248, 248, 248, .35);
+}
+
+.left_arrow {
+    left: -60px;
+}
+
+.right_arrow {
+    right: -60px;
+}
+
+.close_modal {
+    top: 0;
+    right: 30px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.close_modal:hover,
+.left_arrow:hover,
+.right_arrow:hover {
+    cursor: pointer;
+}
+
+.modal_card div:first-child {
+    border-bottom: 1px solid grey; 
+}
+
+.modal_card div {
+    padding: 10px;
+}
+
+.modal_card p {
+    margin: 10px 0;
+}
+
+.modal_card img {
+    margin: 10px;
+}
+
+
+
+
+/********** MOBILE RESPONSIVENESS *************/
+
+@media (min-width: 760px) {
+    
+    #directory {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .modal_card {
+        margin-top: 10%;
+    }
+}
+
+/********** DESKTOP RESPONSIVENESS *************/
+
+@media (min-width: 1275px) {
+    #directory {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+
+    
+}

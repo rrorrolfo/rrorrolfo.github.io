@@ -1,0 +1,124 @@
+
+.grid__row {
+
+    font-size: $normal;
+    margin: $standard 0;
+    @include flexbox {
+        flex-direction: column;
+    }
+
+    @include media2 ($just: space-between){
+        flex-direction: row;
+    }
+}
+
+.grid__col--3 {
+    @include media2($num: 25%) {
+        margin-left: 5%;
+    }
+}
+
+.grid__col--4 {
+    @include media2 ($num: 30%);
+}
+
+.grid__col--6 {
+    @include media2 {
+        margin-left: 5%;
+        margin-right: auto;
+    }
+    
+}
+
+.grid__col--8 {
+    @include media2 ($num: 60%);
+}
+
+.grid__col--9 {
+    @include media2 ($num: 50%) {
+        margin: 0 auto;
+    }
+
+    ul {
+        @include media2 ($just: space-around) {
+            @include flexbox {
+                margin-right: 10%;
+            }
+        }
+
+    }
+}
+
+.grid__col--12 {
+
+    @include media2 ($num: 100%, $just: space-around) {
+        @include flexbox;
+        margin-top: $standard;
+    }
+
+    button {
+        flex-basis: 16%;
+    }
+}
+
+.grid__col--3.theme__colors {
+    @include grid($purple);
+    @extend %content-to-left;
+
+    @include media2 ($num: 22%, $align: center) {
+        margin-left: 0;
+    }
+}
+
+.grid__col--4.theme__colors{
+    @include grid($light-blue);
+    @extend %content-to-left;
+
+    @include media2 ($num: 30%, $align: center);
+}
+
+.grid__col--5.theme__colors{
+    @include grid($green);
+    @extend %content-to-left;
+
+    @include media2 ($num: 39%, $align: center);
+}
+
+.grid__col--6.theme__colors {
+    @include grid($blue);
+    @extend %content-to-left;
+
+    @include media2 ($num: 47%, $align: center){
+        margin: 0;
+    };
+}
+
+.grid__col--7.theme__colors {
+    @include grid($light-red);
+    @extend %content-to-left;
+
+    @include media2 ($num: 55%, $align: center);
+}
+
+.grid__col--8.theme__colors {
+    @include grid($light-orange);
+    @extend %content-to-left;
+
+    @include media2 ($num: 64%, $align: center);
+}
+
+.grid__col--12.theme__colors {
+    @include grid($light-green);
+    @extend %content-to-left;
+
+        @include media2($num: 100%);
+}
+
+
+
+.centered {
+    @include media2 {
+        margin: 0 auto;
+    }
+}
+
