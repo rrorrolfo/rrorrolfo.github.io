@@ -22,8 +22,7 @@
     background-image: url(../img/what-the-hex-dark.png);
  }
 
- header,
- nav {
+ header {
      background-color: var(--light-black);
  }
 
@@ -62,7 +61,7 @@
     height: 80px;
     width: 80px;
     margin-left: -20px;
-    margin-bottom: -20px;
+    margin-bottom: -24px;
     padding-right: 10px;
  }
 
@@ -75,7 +74,8 @@
      fill: var(--white-color);
  }
 
- #navicon:hover {
+ #navicon:hover,
+ #navicon:hover path {
     fill: var(--yellow-brand);
  }
 
@@ -179,7 +179,28 @@ nav li {
     border: 1px solid red;
 }
 
+/******** FOOTER **********/
+
+footer {
+    display: none;
+    background-image: url(../img/what-the-hex-dark.png);
+    margin-top: 20px;
+}
+
+.footer_icon {
+    margin: 0 5px;
+}
+
+.footer_icon path {
+    fill: rgb(131, 131, 131);
+}
+
+.footer_icon:hover path {
+    fill: var(--yellow-brand);
+}
+
 /******** BACKGROUND LOGO **********/
+
 #back_container {
     width: 100%;
     height: 100%;
@@ -292,7 +313,7 @@ nav li {
 }
 
 .card_2 {
-    background-image: radial-gradient(circle at top left, #FFD200 25%, rgba(30, 167, 247, 0.733));
+    background-image: radial-gradient(circle at top left, #FFD200 25%, rgba(30, 167, 247, 0.733) );
     padding-top: 10px;
     padding-bottom: 10px;
     border: none;
@@ -310,7 +331,7 @@ nav li {
 
 .card_3 {
     background-image:   radial-gradient(circle at top left, #FFD200 5%, transparent 85%),
-                        url(../img/row.jpg);
+                        url(../img/row_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 20px;
@@ -448,7 +469,7 @@ nav li {
 }
 
 .project_container {
-    width: 50%;
+    width: 60%;
     margin: 0 auto 30px;
     border-radius: 10px;
     box-shadow: 4px 2px 5px var(--light-black);
@@ -671,12 +692,17 @@ textarea::placeholder {
     padding: 5px 10px;
     letter-spacing: 1.5px;
     border-radius: 2.5px;
-    margin-left: 75%;
+    position: absolute;
+    right: 10%;
+}
+
+#iframe_wrapper {
+    height: 355px;
 }
 
 #contact_data {
     width: 80%;
-    margin: 20px auto;
+    margin: 50px auto;
     background-color: var(--light-black);
     color: var(--white-color);
 }
@@ -697,4 +723,182 @@ textarea::placeholder {
 
 #contact_info p {
     font-size: .85rem;
+}
+
+/******* MEDIA QUERIES *******/
+
+
+@media(min-width: 768px) {
+
+    /***** WELCOME *****/
+
+    #welcome {
+        margin-left: 80px;
+    }
+
+    /***** NAV*****/
+
+    #navicon {
+        display: none;
+    }
+
+    nav {
+        width: 60%;
+        top: 0;
+        left: 20%;
+        display: block;
+    }
+
+    /***** FOOTER *****/
+
+    footer {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        right: 10px;
+    }
+    
+    /***** ABOUT *****/
+
+    #about_me {
+        padding: 80px;
+    }
+
+    #two_cards_wrapper {
+        display: flex;
+    }
+
+    .card_2,
+    .card_3 {
+        flex-basis: 45%;
+    }
+
+    /***** WORK *****/
+
+    #work_gallery {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 40px;
+    }
+
+    .project_container {
+        width: 70%;
+        margin-top: 80px;
+    }
+
+    /***** CONTACT *****/
+
+    fieldset div:nth-child(-n+3) {
+        width: 49%;
+    }
+
+    fieldset div:nth-child(2){
+        float: right;
+    }
+
+    fieldset {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    #contact_title,
+    #contact_wrapper {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+
+@media(min-width: 1024px) {
+
+    /***** WELCOME *****/
+
+    #welcome {
+        padding-left: ;
+    }
+
+    /***** NAV AND FOOTER *****/
+
+    header {
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 60px;
+        height: 100%;
+    }
+
+    nav {
+        top: 20%;
+        left: 0;
+        height: 100%;
+        width: 60px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        width: 100%;
+        position: sticky;
+    }
+
+    footer {
+        top: 80%;
+        left: 0;
+        width: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_icon {
+        margin: 5px 0 10px 20px;
+    }
+
+    /***** ABOUT *****/
+
+    #about_info_card {
+        display: flex;
+    }
+
+    .card_1 {
+        flex-basis: 25%;
+    }
+
+    #two_cards_wrapper {
+        flex-basis: 65%;
+    }
+
+    #two_cards_wrapper {
+        flex-direction: column;
+    }
+
+    /***** WORK *****/
+
+    #work_gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .project_container {
+        width: 75%;
+    }
+
+    /***** CONTACT *****/
+
+    #contact_wrapper {
+        display: flex;
+    }
+
+    #contact_form,
+    #contact_data {
+        flex-basis: 45%;
+    }
+
+    #submit {
+        left: 40%;
+    }
+
+    #iframe_wrapper {
+        height: 250px;
+    }
+
 }

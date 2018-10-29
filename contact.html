@@ -127,43 +127,49 @@
             <h1>Contact me</h1>
         </div>
 
-        <form id="contact_form" action="mailto:someone@example.com" method="post" enctype="text/plain">
-            
-            <fieldset>
-                <legend>If you have any questions, please do not hesitate to contact me using the form below:</legend>
+        <div id="contact_wrapper">
 
-                <div>
-                    <label></label>
-                    <input type="text" id="name" placeholder="Name" name="name">
-                </div>
+          <form id="contact_form" action="mailto:someone@example.com" method="post" enctype="text/plain">
+              
+              <fieldset>
+                  <legend>If you have any questions, please do not hesitate to contact me using the form below:</legend>
 
-                <div>
-                    <label></label>
-                    <input type="email" id="email" placeholder="Email" name="email" required>
-                </div>
+                  <div>
+                      <label></label>
+                      <input type="text" id="name" placeholder="Name" name="name">
+                  </div>
 
-                <div>
-                    <label></label>
-                    <input type="Subject" id="subject" placeholder="Subject" name="subject">
-                </div>
+                  <div>
+                      <label></label>
+                      <input type="email" id="email" placeholder="Email" name="email" required>
+                  </div>
 
-                <div>
-                    <label></label>
-                    <textarea id="message" placeholder="Message" name="message" rows="6" required></textarea>
-                </div>
+                  <div>
+                      <label></label>
+                      <input type="Subject" id="subject" placeholder="Subject" name="subject">
+                  </div>
 
-            </fieldset>
+                  <div>
+                      <label></label>
+                      <textarea id="message" placeholder="Message" name="message" rows="6" required></textarea>
+                  </div>
 
-            <button type="submit" id="submit">SEND</button>
-        </form>
+              </fieldset>
 
-        <div id="contact_data">
-            <div id="contact_info">
-                <p>Rodolfo del Rio,</p>
-                <p>Tallin, Estonia.</p>
-                <p><span>@</span>: rodolfo.perezhz@gmail.com</p>
-            </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d259415.5558592596!2d24.738241449999993!3d59.47169299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929499df5616bf%3A0x400b36d18fc6270!2sTallinn!5e0!3m2!1sen!2see!4v1540570731555" width="100%" height="355" frameborder="0"  allowfullscreen></iframe>
+              <button type="submit" id="submit">SEND</button>
+          </form>
+
+          <div id="contact_data">
+              <div id="contact_info">
+                  <p>Rodolfo del Rio,</p>
+                  <p>Tallin, Estonia.</p>
+                  <p><span>@</span>: rodolfo.perezhz@gmail.com</p>
+              </div>
+              <div id="iframe_wrapper">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d259415.5558592596!2d24.738241449999993!3d59.47169299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929499df5616bf%3A0x400b36d18fc6270!2sTallinn!5e0!3m2!1sen!2see!4v1540570731555" width="100%" height="100%" frameborder="0"></iframe>
+              </div>
+          </div>
+
         </div>
 
     </main>
