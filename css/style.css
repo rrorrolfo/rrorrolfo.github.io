@@ -14,7 +14,12 @@
  /******** GENERAL **********/
  
  body {
-     background-color: var(--black-color);
+    background-color: var(--black-color);
+ }
+
+ header,
+ nav {
+    background-image: url(../img/what-the-hex-dark.png);
  }
 
  header,
@@ -34,6 +39,10 @@
  button {
     border: 1px solid var(--yellow-brand);
     color: var(--yellow-brand);
+ }
+
+ ul {
+     list-style: none;
  }
 
  button:focus,
@@ -83,7 +92,6 @@ nav {
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: space-around;
     margin: 0; 
@@ -231,7 +239,6 @@ nav li {
     font-size: 2.5em;
 }
 
-#about_me p,
 #skills_text p {
     color: var(--white-color);
 }
@@ -239,33 +246,90 @@ nav li {
 #portrait {
     width: 150px;
     height: 150px;
-    float: right;
-    margin-left: 20px;
     margin-bottom: 10px;
     margin-top: 10px;
     border-radius: 50%;
 }
 
-#my_map {
-    width: 100%;
-    height: 30%;
+#about_info_card {
+    background-color: var(--light-black);
+    padding: 20px 0;
+    color: var(--white-color);
+    box-shadow: 4px 2px 5px var(--light-black);
 }
 
-#about_me #world {
-    margin-bottom: 5px;
+.info_card {
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid transparent;
+    padding: 0 20px;
+}
+
+.info_card,
+#about_info_card {
+    border-radius: 5px;
+}
+
+.info_card p.answer::before,
+.info_card li::before {
+    content: "- ";
+}
+
+.card_1 {
+    text-align: center;
+}
+
+.card_1 h3 {
+    margin-bottom: 0;
     color: var(--yellow-brand);
+}
+
+.card_1 h4 {
+    color: var(--yellow-brand);
+    font-weight: 200;
+    font-size: .75rem;
+    margin-top: 10px;
+}
+
+.card_2 {
+    background-image: radial-gradient(circle at top left, #FFD200 25%, rgba(30, 167, 247, 0.733));
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+}
+
+.card_3 p {
+    margin-bottom: 0;
+}
+
+.answer {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: .9rem;
+}
+
+.card_3 {
+    background-image:   radial-gradient(circle at top left, #FFD200 5%, transparent 85%),
+                        url(../img/row.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
 }
 
 /******** SKILLS SECTION **********/
 
 #skills_text {
-    margin: 30px;
+    margin: 60px 30px 30px;
     padding-bottom: 30px;
     color: var(--yellow-brand);
 }
 
 #skills_text span {
     font-weight: 600;
+}
+
+#skills_cube {
+    padding-bottom: 50px;
 }
 
 .html {
@@ -308,7 +372,7 @@ nav li {
     text-align: center;
     border: 2px solid #000;
     background-color: #1f1e1ef3;
-   box-shadow: inset 0 0 50px 20px #000;
+    box-shadow: inset 0 0 50px 20px #000;
 }
 
 .skills p {
@@ -391,7 +455,7 @@ nav li {
 }
 
 .project_container:first-child {
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 .project {
@@ -512,7 +576,6 @@ nav li {
 }
 
 .cta_container .project_details {
-    position: relative;
    z-index: 2;
 }
 
@@ -552,7 +615,7 @@ nav li {
 
 #contact_title {
     color: var(--yellow-brand);
-    margin: 25px 8%
+    margin: 60px 8% 25px;
 }
 
 #contact_form {

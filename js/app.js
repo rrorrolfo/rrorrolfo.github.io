@@ -13,7 +13,3 @@ $menu.click( () => {
 const nav = document.querySelector("nav");
 const menu_icons = document.querySelectorAll(".nav_icon");
 const icon_ovelays = document.querySelectorAll(".nav_overlay");
-
-nav.addEventListener("mouseenter", (event) => {
-    console.log(event.target);
-})
