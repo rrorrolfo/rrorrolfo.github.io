@@ -50,6 +50,10 @@
     outline: none;
  }
 
+.close_msg:hover {
+    cursor: pointer;
+}
+
  /******** HEADER **********/
 
  header {
@@ -176,7 +180,6 @@ nav li {
 
 .current path{
     fill: var(--yellow-brand);
-    border: 1px solid red;
 }
 
 /******** FOOTER **********/
@@ -242,7 +245,8 @@ footer {
 }
 
 .main_cta:hover,
-#submit:hover {
+#submit:hover,
+.side-b button:hover {
     background-color: var(--yellow-brand);
     color: var(--light-black);
 }
@@ -440,32 +444,6 @@ footer {
 	animation: spin 8s infinite linear;
 }
 
-/* 
-@keyframes spin-vertical {
-	from { transform: rotateX(0); }
-	to { transform: rotateX(-360deg); }
-}
-
-.cube-wrap.vertical .cube {
-	margin: 0 auto;
-
-	transform-origin: 0 100px;
-	animation: spin-vertical 5s infinite linear;
-}
-
-.cube-wrap.vertical .top {
-	transform: rotateX(-270deg) translateY(-100px);
-}
-
-.cube-wrap.vertical .back {
-	transform: translateZ(-100px) rotateX(180deg);
-}
-
-.cube-wrap.vertical .bottom {
-	transform: rotateX(-90deg) translateY(100px);
-}
- */
-
  /******** PROJECTS SECTION **********/
 
 #work_gallery {
@@ -559,6 +537,27 @@ footer {
     padding: 5px 10px;
     text-align: center;
     border-radius: 0 0 10px 10px;
+}
+
+.pop_msg {
+    position: fixed;
+    padding: 10px;
+    padding-left: 15px;
+    bottom: 25px;
+    width: 320px;
+    right: 20px;
+    border-radius: 5px;
+    color: var(--light-black);
+    background-color: var(--yellow-brand);
+    border: 1px solid var(--yellow-brand);
+    display: none;
+}
+
+.close_msg {
+    position: absolute;
+    top: -10px;
+    right: 7.5px;
+    padding: 5px;
 }
 
 /******* Tags decoration *******/
@@ -822,6 +821,15 @@ textarea::placeholder {
         margin-top: 80px;
     }
 
+    .pop_msg {
+        width: 600px;
+        top: 75px;
+        bottom: unset;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0; 
+    }
+
     /***** CONTACT *****/
 
     fieldset div:nth-child(-n+3) {
@@ -941,6 +949,10 @@ textarea::placeholder {
 
     .project_container {
         width: 75%;
+    }
+
+    .pop_msg {
+        top: 15px;
     }
 
     /***** CONTACT *****/

@@ -14,8 +14,13 @@ window.addEventListener("resize", () => {
     }
 })
 
-// CHANGE PATH OF SVGs WHEN HOVER
+// POP UP MESSAGE - PROJECTS
 
-const nav = document.querySelector("nav");
-const menu_icons = document.querySelectorAll(".nav_icon");
-const icon_ovelays = document.querySelectorAll(".nav_overlay");
+    const $pop_msg = $(".pop_msg");
+    const $close_msg = $(".close_msg");
+
+    $pop_msg.delay(600).show(600);
+
+    $close_msg.click(() => {
+        $pop_msg.hide(300);
+    });
