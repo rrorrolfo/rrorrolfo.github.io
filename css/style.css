@@ -159,7 +159,7 @@ nav li {
     height: 100%;
     font-size: .70rem;
     color: var(--yellow-brand);
-    background-color: var(--light-black);
+    background-image: url(../img/what-the-hex-dark.png);
     opacity: 0;
     transform: opacity;
 }
@@ -232,17 +232,16 @@ footer {
     margin-bottom: 40px;
 }
 
-#main_cta {
-    border: 1px solid var(--yellow-brand);
+.main_cta {
     background-color: var(--black-color);
-    color: var(--yellow-brand);
     padding: 8px 15px;
     border-radius: 2.5px;
     letter-spacing: 3px;
     font-size: .75rem;
+    width: 134px;
 }
 
-#main_cta:hover,
+.main_cta:hover,
 #submit:hover {
     background-color: var(--yellow-brand);
     color: var(--light-black);
@@ -277,6 +276,8 @@ footer {
     padding: 20px 0;
     color: var(--white-color);
     box-shadow: 4px 2px 5px var(--light-black);
+    width: 90%;
+    margin: 0 auto;
 }
 
 .info_card {
@@ -392,7 +393,7 @@ footer {
     height: 200px;
     text-align: center;
     border: 2px solid #000;
-    background-color: #1f1e1ef3;
+    background-color: rgba(31, 30, 30, 0.966);
     box-shadow: inset 0 0 50px 20px #000;
 }
 
@@ -400,6 +401,11 @@ footer {
     margin-top: 40%;
     font-size: 1.5rem;
     letter-spacing: 1.5px;
+}
+
+#skills_cube {
+    height: 250px;
+    margin-bottom: 50px;
 }
 
 .back {
@@ -730,10 +736,20 @@ textarea::placeholder {
 
 @media(min-width: 768px) {
 
+    /***** BACK LOGO *****/
+
+    #back_container {
+        padding-top: 100px;
+    }
+
     /***** WELCOME *****/
 
     #welcome {
-        margin-left: 80px;
+        margin-left: 130px;
+    }
+
+    #welcome h1 {
+        font-size: 3rem;
     }
 
     /***** NAV*****/
@@ -768,9 +784,30 @@ textarea::placeholder {
         display: flex;
     }
 
+    #about_info_card {
+        width: 80%;
+    }
+
+    /***** SKILLS *****/
+
+    #skills_wrapper {
+        display: flex;
+    }
+
     .card_2,
-    .card_3 {
+    .card_3,
+    #skills_text,
+    #skills_cube {
         flex-basis: 45%;
+    }
+
+    #skills_cube {
+        margin-top: 225px;
+        margin-bottom: 0;
+    }
+
+    #skills_text {
+        margin-left: 150px;
     }
 
     /***** WORK *****/
@@ -810,11 +847,20 @@ textarea::placeholder {
 
 @media(min-width: 1024px) {
 
+    /***** BACK LOGO *****/
+
+    #back_container {
+        padding-top: 0;
+    }
+
     /***** WELCOME *****/
 
     #welcome {
-        padding-left: ;
+        margin-left: 180px;
+        padding-top: 80px;
     }
+
+    
 
     /***** NAV AND FOOTER *****/
 
@@ -857,6 +903,10 @@ textarea::placeholder {
     /***** ABOUT *****/
 
     #about_info_card {
+        width: 70%;
+    }
+
+    #about_info_card {
         display: flex;
     }
 
@@ -870,6 +920,17 @@ textarea::placeholder {
 
     #two_cards_wrapper {
         flex-direction: column;
+    }
+
+    /***** SKILLS *****/
+
+    #skills_text {
+        margin-top: 150px;
+        padding-left: 20px;
+    }
+
+    #skills_text {
+        flex-basis: 50%;
     }
 
     /***** WORK *****/
