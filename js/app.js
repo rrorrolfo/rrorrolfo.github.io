@@ -14,6 +14,14 @@ window.addEventListener("resize", () => {
     }
 })
 
+// SHOW CTAS IN WELCOME
+
+const $ctas = $("#welcome a");
+const $subtitle = $("#welcome h2");
+
+$ctas.hide().delay(3100).toggle("fade");
+$subtitle.hide().delay(2850).toggle("fade");
+
 // POP UP MESSAGE - PROJECTS
 
     const $pop_msg = $(".pop_msg");

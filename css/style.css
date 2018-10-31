@@ -217,6 +217,61 @@ footer {
     z-index: -1000;
 }
 
+@keyframes offset {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill-it-a {
+    100% {
+        fill: url(#SVGID_1_);
+    }
+}
+
+@keyframes fill-it-b {
+    100% {
+        fill: url(#SVGID_3_);
+    }
+}
+
+.r_1,
+.r_2 {
+    stroke: var(--yellow-brand);
+    stroke-width: 2;
+    stroke-dasharray: 1900;
+    stroke-dashoffset: 1900;
+}
+
+.r_1 {
+    animation: offset 2.5s linear forwards, fill-it-a .2s 2.5s forwards;
+}
+
+.r_2 {
+    animation: offset 4s linear forwards, fill-it-b .2s 2.5s forwards;
+}
+
+@keyframes show_welcome {
+    0% {
+        transform: scale(0);
+    }
+
+    30% {
+        transform: scale(1.1);
+    }
+
+    60% {
+        transform: scale(0.9);
+    }
+}
+
+#welcome h1 {
+    animation: show_welcome 1.5s ease-out backwards;
+    transform-origin: 50% 50%;
+}
+
+
+
 /******** WELCOME MESSAGE **********/
 
 #welcome {
