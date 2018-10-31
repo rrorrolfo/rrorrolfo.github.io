@@ -79,7 +79,7 @@
  }
 
  #navicon:hover,
- #navicon:hover path {
+ .nav_icon:hover path {
     fill: var(--yellow-brand);
  }
 
@@ -90,8 +90,8 @@
 nav {
     position: absolute;
     top: 60px;
-    width: 100%;
     display: none;
+    width: 100%;
     z-index: 10;
 }
 
@@ -268,6 +268,7 @@ footer {
 #welcome h1 {
     animation: show_welcome 1.5s ease-out backwards;
     transform-origin: 50% 50%;
+    animation-delay: .5s;
 }
 
 
@@ -373,7 +374,9 @@ footer {
 }
 
 .card_2 {
-    background-image: radial-gradient(circle at top left, #FFD200 25%, rgba(30, 167, 247, 0.733) );
+    background-image: radial-gradient(circle at top left, #FFD200 5%, transparent 85% ), url(../img/water.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 10px;
     padding-bottom: 10px;
     border: none;
@@ -391,7 +394,7 @@ footer {
 
 .card_3 {
     background-image:   radial-gradient(circle at top left, #FFD200 5%, transparent 85%),
-                        url(../img/row_2.jpg);
+                        url(../img/row.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 20px;
@@ -823,7 +826,7 @@ textarea::placeholder {
 
     footer {
         display: inline-block;
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 10px;
     }
@@ -905,6 +908,10 @@ textarea::placeholder {
         padding-left: 60px;
         padding-right: 60px;
     }
+
+    #submit {
+        right: 17%;
+    }
 }
 
 
@@ -923,6 +930,14 @@ textarea::placeholder {
         padding-top: 80px;
     }
 
+    #welcome h2,
+    #welcome button {
+        font-size: 1rem;
+    }
+
+    #welcome button {
+        width: 170px;
+    }
     
 
     /***** NAV AND FOOTER *****/
@@ -957,6 +972,7 @@ textarea::placeholder {
         width: 60px;
         display: flex;
         flex-direction: column;
+        z-index: 10;
     }
 
     .footer_icon {
@@ -1004,6 +1020,15 @@ textarea::placeholder {
 
     .project_container {
         width: 75%;
+    }
+    .project_overlay {
+        padding: 20px;
+        padding-top: 50px;
+    }
+
+    .project_overlay p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
     }
 
     .pop_msg {

@@ -8,12 +8,6 @@ $menu.click( () => {
     $nav.toggle("slide", {direction: "right"});
 })
 
-window.addEventListener("resize", () => {
-    if (window.screen.width > 768) {
-        $nav.show;
-    }
-})
-
 // SHOW CTAS IN WELCOME
 
 const $ctas = $("#welcome a");
