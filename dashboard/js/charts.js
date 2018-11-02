@@ -279,19 +279,17 @@ function printMembers() {
   const newMembers = [];
   let list = " ";
 
-  for(let i = 0; i < new_members.length; i += 1) {
-    list = '<div class="member">'
-    list += '<img src="' + new_members[i]["photo"] +'">'
-    list += '<div class="member_data_wrapper">'
-    list += '<p class="member_name">'+ new_members[i]["name"] + '</p>'
-    list += '<p class="member_email">' + new_members[i]["email"] + '</p>'
-    list += '</div>'
-    list += '<p class="date_joined">' + new_members[i]["dateJoined"].getDate() + '/' + new_members[i]["dateJoined"].getMonth() + '/' + new_members[i]["dateJoined"].getFullYear() + '</p>'
-    list += '</div>'
-
-    newMembers.push(list);
-  }
-  output_members.innerHTML = newMembers;
+const new_m = new_members.map(member => `
+  <div class="member">
+  <img src="${member.photo}">
+  <div class="member_data_wrapper">
+  <p class="member_name">${member.name}</p>
+  <p class="member_email">${member.email}</p>
+  </div>
+  <p class="date_joined">${member.dateJoined.getDate()}/${member.dateJoined.getMonth()}/${member.dateJoined.getFullYear()}</p>
+  </div>
+`);
+  output_members.innerHTML = new_m.join("");
 }
 
 printMembers();
@@ -341,7 +339,17 @@ function print_activity () {
   const activity = [];
   let output = " ";
 
-  for (let i = 0; i < members_activity.length; i += 1) {
+  const m_activity = members_activity.map(member => `
+    <div class="member">
+    <img src="${member.photo}">
+    <div class="member_data_wrapper">
+    <p class="activity_done">${member.name}  ${member.action} on ${member.sectionOfActivity}</p>
+    <p class="activity_time">${member.timeOfActivity} ${member.timeUnit} ago</p>
+    </div><p class="activity_details">></p></div>
+
+  `)
+
+  /*for (let i = 0; i < members_activity.length; i += 1) {
     output = '<div class="member">'
     output += '<img src="' + members_activity[i]["photo"] + '">'
     output += '<div class="member_data_wrapper">'
@@ -350,9 +358,9 @@ function print_activity () {
     output += '</div><p class="activity_details">></p></div>'
 
     activity.push(output);
-  }
+  }*/
 
-  output_activity.innerHTML = activity;
+  output_activity.innerHTML = m_activity.join("");
 }
 
 print_activity();
