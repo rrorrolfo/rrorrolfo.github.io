@@ -705,6 +705,7 @@ nav li {
 #contact_form {
     width: 85%;
     margin: 0 auto;
+    position: relative;
 }
 
 fieldset {
@@ -756,7 +757,8 @@ textarea::placeholder {
     letter-spacing: 1.5px;
     border-radius: 2.5px;
     position: absolute;
-    right: 10%;
+    bottom: -30px;
+    right: 10px;
 }
 
 #iframe_wrapper {
@@ -910,7 +912,7 @@ textarea::placeholder {
     }
 
     #submit {
-        right: 17%;
+        right: 20px;
     }
 }
 
@@ -1047,7 +1049,8 @@ textarea::placeholder {
     }
 
     #submit {
-        left: 40%;
+        bottom: 115px;
+        right: 22.5px;
     }
 
     #iframe_wrapper {
