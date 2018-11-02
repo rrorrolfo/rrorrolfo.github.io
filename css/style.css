@@ -176,7 +176,6 @@ nav li {
 
 .nav_overlay:hover {
     opacity: 1;
-    transition: .5s;
 }
 
 .current path{
@@ -226,13 +225,15 @@ nav li {
 
 @keyframes fill-it-a {
     100% {
-        fill: url(#SVGID_1_);
+        fill: var(--yellow-brand);
+        /*fill: url(#SVGID_1_);*/
     }
 }
 
 @keyframes fill-it-b {
     100% {
-        fill: url(#SVGID_3_);
+        fill: rgb(231, 216, 14);
+        /*fill: url(#SVGID_3_);*/
     }
 }
 
@@ -303,7 +304,7 @@ nav li {
 
 .main_cta:hover,
 #submit:hover,
-.side-b button:hover {
+.cta_overlay button:hover {
     background-color: var(--yellow-brand);
     color: var(--light-black);
 }
@@ -555,8 +556,10 @@ nav li {
     transform: scale(1.1);
 }
 
-.project_container:hover .project_overlay {
+.project_container:hover .project_overlay,
+.project_container:hover .cta_overlay {
     opacity: 1;
+    transition-duration: 500ms;
 }
 
 .project_container h3 {
@@ -577,7 +580,7 @@ nav li {
     
 }
 
-.side-b button {
+.cta_overlay button {
     display: block;
     width: 90%;
     height: 40px;
@@ -596,6 +599,21 @@ nav li {
     padding: 5px 10px;
     text-align: center;
     border-radius: 0 0 10px 10px;
+    position: relative;
+}
+
+.cta_overlay {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: var(--light-black);
+    transform: opacity;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .pop_msg {
@@ -664,12 +682,6 @@ nav li {
    z-index: 2;
 }
 
-.turning_div {
-	position: relative;
-    transform-style: preserve-3d;
-    transition: transform 1s cubic-bezier(.55, -.62, .27, 1.2);
-}
-
 .cta_project {
 	position: absolute;
 	top: 0;
@@ -681,19 +693,6 @@ nav li {
     flex-direction: column;
     justify-content: space-around;
     border-radius: 0 0 5px 5px;
-}
-
-.project_container:hover .turning_div{
-    transform: rotateY(-180deg);
-}
-
-.side-a,
-.side-b {
-    backface-visibility: hidden;
-}
-
-.side-b {
-    transform: rotateY(180deg);
 }
 
 /******* CONTACT FORM *******/
