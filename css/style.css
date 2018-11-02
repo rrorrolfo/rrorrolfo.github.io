@@ -33,6 +33,7 @@
  
  a {
      text-decoration: none;
+     color: var(--yellow-brand);
  }
 
  button {
@@ -184,7 +185,7 @@ nav li {
 
 /******** FOOTER **********/
 
-footer {
+#prof_media {
     display: none;
     background-image: url(../img/what-the-hex-dark.png);
     margin-top: 20px;
@@ -824,7 +825,7 @@ textarea::placeholder {
 
     /***** FOOTER *****/
 
-    footer {
+    #prof_media {
         display: inline-block;
         position: absolute;
         top: 0;
@@ -966,7 +967,7 @@ textarea::placeholder {
         position: sticky;
     }
 
-    footer {
+    #prof_media {
         top: 80%;
         left: 0;
         width: 60px;

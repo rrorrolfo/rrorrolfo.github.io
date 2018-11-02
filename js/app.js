@@ -6,7 +6,7 @@ const $nav = $("nav");
 
 $menu.click( () => {
     $nav.toggle("slide", {direction: "right"});
-})
+});
 
 // SHOW CTAS IN WELCOME
 
