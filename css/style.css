@@ -307,7 +307,7 @@ nav li {
 
 .main_cta:hover,
 #submit:hover,
-.cta_overlay button:hover {
+.cta_overlay p:hover {
     background-color: var(--yellow-brand);
     color: var(--light-black);
 }
