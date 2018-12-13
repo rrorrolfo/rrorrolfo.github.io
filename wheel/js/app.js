@@ -1,160 +1,120 @@
-////////////  VARIABLES  /////////////
+// VARIABLES
 
-const phrases = [
-    "why so serious",
-    "bond James Bond",
-    "i ll be back",
-    "here is Johnny",
-    "my precious",
-];
-
-
-const start_screen = document.querySelector("#overlay");
-const game_start = document.querySelectorAll(".btn__reset")[0];
+const overlay = document.querySelector("#overlay");
+const title = document.querySelector(".title");
+const start_btn = document.querySelector("#btn__reset");
+const phrase_to_guess = document.querySelector("#phrase ul");
 const keyboard = document.querySelector("#qwerty");
-const phrase = document.querySelector("#phrase");
+const letters = document.querySelectorAll(".key");
+const game__over_message = document.querySelector("#game-over-message");
 
+let game = "";
+let game_phrase = ""; 
 
-let missed = 0;
+//////// STARTING THE GAME ///////
 
-//////////  FUNCTIONS  //////////////
+//event listener for start game button 
+start_btn.addEventListener("click", () => {
 
-/// selects randonly the phrase when the person clicks the start game button
-
-function getRandomPhraseAsArray(arr) {
-    var a =  arr[Math.floor(Math.random() * 6)];
-    const b = [];
-    
-    for (let i = 0; i < a.length; i += 1) {
-        b.push(a.charAt(i));
-    }
-
-    return b
-}
-
-/// PUTS THE HIDDEN PHRASE ON THE BOARD
-
-function addPhraseToDisplay(arr){
-
-    for (let i = 0; i < arr.length; i += 1) {
-        const letter = document.querySelector("#phrase ul");
-        const li = document.createElement("li");
-        
-        letter.appendChild(li);
-        li.textContent = arr[i].toUpperCase();
-
-        if (li.textContent !== " ") {
-            li.className = "letter"
-        } else {
-            li.className = "space"
-        }
-    }
-
-
-}
-
-///// STARTS THE GAME
-
-game_start.addEventListener("click", () => {
-    start_screen.style.display = "none";
-
-    // Reset the game
-
-        // Resets the phrase to guess
-    const letter = document.querySelector("#phrase ul");
-    letter.textContent = "";
-
-        // Resets styling of buttons to default
-    const reset_keyboard = document.querySelectorAll(".keyrow button");
-
-    for (let i = 0; i < reset_keyboard.length; i += 1) {
-        reset_keyboard[i].className = " ";
-        reset_keyboard[i].removeAttribute("disabled");
-    }
-
-        // Resets hearts images to default (5 lifes)
-
-    const tries = document.querySelectorAll(".tries");
-            
-    for (let i = 0; i < tries.length; i += 1) {
-        tries[i].firstChild.setAttribute("src","images/liveHeart.png");
-    }
-
-        // Reset missed attempts score
-
-        missed = 0;
-    
-    // SETS PHRASE TO GUESS
-    let a = getRandomPhraseAsArray(phrases);
-    addPhraseToDisplay(a);
+    resetDisplay();
 
 });
 
+/////// KEYBOARD FUNCTIONALITY ///////
 
-///// CHECKS THE LETTER 
-
-function checkLetter (chosen_letter) {
-    const selected_letter = chosen_letter.toUpperCase();
-    const letters = document.querySelectorAll(".letter");
-    let letterFound = "null";
-
-    for (let i = 0; i < letters.length; i += 1) {
-        
-         if (selected_letter === letters[i].textContent) {
-            letterFound = selected_letter;
-            letters[i].className += " show";
-        }
-    }
-
-    return letterFound
-}
-
-//// CHECKS IF PLAYER GUESSED CORRECT ANSWER
-
-function checkWin() {
-    const letters = document.querySelectorAll(".letter");
-    const shown_letters = document.querySelectorAll(".show");
-    const status_message = start_screen.firstChild.nextElementSibling;
-    const cta_replay = start_screen.lastChild.previousElementSibling;
-    
-    if (letters.length === shown_letters.length) {
-        start_screen.style.display = "flex";
-        start_screen.className = "win";
-        status_message.textContent = "YOU WON!!!";
-        cta_replay.textContent = "Play Again";
-    } 
-    
-    if (missed >= 5) {
-        start_screen.style.display = "flex";
-        start_screen.className = "lose";
-        status_message.textContent = "YOU LOST :(";
-        cta_replay.textContent = "Play Again";
-    }
-}
-
-/// GAMEPLAY EVENT STARTER
-
+//event listener for the keyboard keys
 keyboard.addEventListener("click", (event) => {
 
-    const a = event.target;
-    const b = a.textContent;
+    
+    
 
-    if (a.tagName == "BUTTON") {
-        a.className = "chosen";
-        a.setAttribute("disabled", true);
-        const c = checkLetter(b);
+    //If the target is a letter on the keyboard the markbutton function is called
+    if (event.target.className === "key") {
 
-        if (c === "null") {
-            a.className += " chosen_mistaken"; 
-            const tries = document.querySelectorAll(".tries");
-            tries[missed].firstChild.setAttribute("src","images/lostHeart.png");
-            missed += 1;
+    // letter clicked on the keyboard
+    const flag_letter = event.target.textContent;
 
-        }
-        
+        markButton(flag_letter);
+    
     }
-
-    checkWin();
 
 });
 
+window.addEventListener("keyup", (event) => {
+
+    // letter clicked on the keyboard
+    const flag_letter = event.key;
+    //regular expression for validating that a letter is clicked
+    const only_letters = string => /^[a-zA-Z]+$/.test(string);
+    // checks to see if the letter pressed value is pressed for the first time
+    const unique_letter = flag_letter => {
+        
+        let status = "";
+
+        letters.forEach(letter => {
+
+            if(letter.textContent === flag_letter) {
+
+                //if it is second time false is returned
+                if (letter.disabled === true) {
+                    status = false;
+                //if it is first time true is returned
+                } else if (letter.disabled === false) {
+                    status = true;
+                }
+            }
+
+        });
+
+        return status
+        
+    }
+
+    //Only If the letter pressed on the keyboard is a letter and it is the first time it is pressed the markbutton function will be called
+    if (only_letters(flag_letter) === true && unique_letter(flag_letter) === true) {
+
+        //markbutton function is called
+        markButton(flag_letter);
+
+    }
+    
+    
+});
+
+//
+
+const markButton = (flag_letter) => {
+
+    //Disables the clicked key on the keyboard
+    letters.forEach(letter => {
+
+        if (letter.textContent === flag_letter) {
+            letter.disabled = true;
+        }
+
+    });
+    //Calls the method that will asses the selection of the letter
+    game.handleInteraction(flag_letter);
+    
+}
+
+// 
+
+const resetDisplay = () => {
+
+    //Resets decoration of all keyboard keys
+        letters.forEach(letter => {
+            letter.className = "key";
+            letter.disabled = false;
+        });
+    //Resets to five lifes
+    const lifes = document.querySelectorAll(".tries img");
+        lifes.forEach(item => item.setAttribute("src", "images/liveHeart.png"));
+    //Hides overlay when start button is clicked
+    overlay.style.display = "none";
+    //Creates new instance of a Game (game object)
+    game = new Game();
+    //Adds the phrase to the board
+    game.startGame();
+
+}
