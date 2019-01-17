@@ -413,6 +413,28 @@ nav li {
     color: var(--yellow-brand);
 }
 
+#stacks {
+    margin-left: 20px;
+    margin-bottom: 35px;
+}
+
+.stack_list {
+    text-align: left;
+    padding-bottom: 15px;
+    list-style: square;
+    border-bottom: 1px dotted #fff;
+}
+
+.stack_list li:first-child {
+    margin-bottom: 15px;
+    text-align: center;
+    list-style: none;
+}
+
+#stacks .stack_list li {
+    color: #fff;
+}
+
 #skills_text span {
     font-weight: 600;
 }
@@ -437,8 +459,12 @@ nav li {
     color: var(--sass-color);
 }
 
-.wp {
-    color: #fff;
+.other {
+    color: rgb(168, 161, 161);
+}
+
+.db {
+    color: rgb(50, 187, 84);
 }
 
 .skills_wrap {
@@ -605,6 +631,12 @@ nav li {
     text-align: center;
     border-radius: 0 0 10px 10px;
     position: relative;
+}
+
+.project_details a:last-child,
+.project_details p {
+    border: 1px solid var(--yellow-brand);
+    width: 90%;
 }
 
 .cta_overlay {
@@ -865,19 +897,17 @@ iframe {
     }
 
     .card_2,
-    .card_3,
-    #skills_text,
-    #skills_cube {
+    .card_3 {
         flex-basis: 45%;
     }
 
-    #skills_cube {
-        margin-top: 225px;
-        margin-bottom: 0;
+    #skills_text {
+        margin: 0 75px;
     }
 
-    #skills_text {
-        margin-left: 150px;
+    #stacks {
+        width: 65%;
+        margin: 0 auto;
     }
 
     /***** WORK *****/
@@ -1017,12 +1047,19 @@ iframe {
     /***** SKILLS *****/
 
     #skills_text {
-        margin-top: 150px;
+        margin-top: 50px;
         padding-left: 20px;
     }
 
-    #skills_text {
-        flex-basis: 50%;
+    #stacks {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+    }
+
+    #stacks ul {
+        flex-basis: 45%;
+        padding: 15px 20px;
     }
 
     /***** WORK *****/
