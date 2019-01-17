@@ -421,7 +421,6 @@ nav li {
 .stack_list {
     text-align: left;
     padding-bottom: 15px;
-    list-style: square;
     border-bottom: 1px dotted #fff;
 }
 
@@ -617,7 +616,7 @@ nav li {
     color: var(--white-color);
     padding-left: 25px;
     padding-right: 25px;
-    display: none;
+    display: ;
 }
 
 .project_specifications h4 {
