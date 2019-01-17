@@ -431,6 +431,18 @@ nav li {
     list-style: none;
 }
 
+#css_tech {
+    list-style: circle;
+    margin: 5px 25px 10px;
+    font-size: .85rem;
+}
+
+#css_tech li:first-child {
+    margin: 0;
+    text-align: left;
+    list-style: circle;
+}
+
 #stacks .stack_list li {
     color: #fff;
 }
@@ -542,10 +554,9 @@ nav li {
 }
 
 .project_container {
-    width: 60%;
+    width: 80%;
     margin: 0 auto 30px;
-    border-radius: 10px;
-    box-shadow: 4px 2px 5px var(--light-black);
+    /*box-shadow: 4px 2px 5px var(--light-black);*/
 }
 
 .project_container:first-child {
@@ -557,16 +568,84 @@ nav li {
     margin-bottom: -5px;
     position: relative;
     overflow: hidden;
-    border-radius:10px 10px 0 0;
+    
 }
 
 .project img {
     width: 100%;
+    height: 200px;
     transition: transform .6s;
     transform-origin: 0 0;
 }
 
-.project_overlay {
+.project_container:hover img {
+    transform: scale(1.1);
+}
+
+.project_container h3 {
+    margin: 5px 0 10px;
+    font-size: 1rem;
+}
+
+.project_details {
+    color: var(--white-color);
+    margin: 0 auto;
+    background-color: var(--light-black);
+    padding: 5px 10px;
+    text-align: center;
+    position: relative;
+}
+
+.project_details p {
+    width: 90%;
+    margin-left: 1em;
+    border-radius: 5px;
+    padding: 5px 0 ;
+    letter-spacing: 2px;
+    font-size: .85rem;
+    border-bottom: 1px dotted var(--yellow-brand);
+}
+
+.details_arrow_up {
+    display: none;
+}
+
+/******** PROJECT Specifications DIV **********/
+
+.project_specifications {
+    background-color: var(--light-black);
+    color: var(--white-color);
+    padding-left: 25px;
+    padding-right: 25px;
+    display: none;
+}
+
+.project_specifications h4 {
+    margin-top: 0;
+    padding: 10px 0;
+    color: var(--yellow-brand);
+}
+
+.project_specifications p:first-child {
+    margin-top: 0;
+}
+
+.specifications_list li{
+    margin: 10px 0;
+}
+
+.project_specifications ul {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+.tick {
+    color: var(--yellow-brand);
+}
+
+
+
+/*.project_overlay {
     position: absolute; 
     top:0;
     bottom: 0;
@@ -579,23 +658,20 @@ nav li {
     flex-direction: column;
     text-align: center;
     padding: 5px 15px;
-}
+} */
 
-.project_container:hover img {
-    transform: scale(1.1);
-}
 
+
+/*
 .project_container:hover .project_overlay,
 .project_container:hover .cta_overlay {
     opacity: 1;
     transition-duration: 500ms;
-}
+}*/
 
-.project_container h3 {
-    margin: 5px 0 10px;
-    font-size: 1rem;
-}
 
+
+/*
 .project_overlay h4 {
     margin: 5px;
 }
@@ -622,23 +698,11 @@ nav li {
     background-color: var(--light-black);
     border: 1px solid var(--yellow-brand);
 }
+*/
 
-.project_details {
-    color: var(--white-color);
-    margin: 0 auto;
-    background-color: var(--light-black);
-    padding: 5px 10px;
-    text-align: center;
-    border-radius: 0 0 10px 10px;
-    position: relative;
-}
 
-.project_details a:last-child,
-.project_details p {
-    border: 1px solid var(--yellow-brand);
-    width: 90%;
-}
 
+/*
 .cta_overlay {
     position: absolute;
     top:0;
@@ -652,7 +716,9 @@ nav li {
     flex-direction: column;
     justify-content: center;
 }
+*/
 
+/*
 .pop_msg {
     position: fixed;
     padding: 10px;
@@ -673,6 +739,7 @@ nav li {
     right: 7.5px;
     padding: 5px;
 }
+*/
 
 /******* Tags decoration *******/
 
@@ -710,7 +777,7 @@ nav li {
 
 /******* 3D FLPPING CTA *******/
 
-
+/*
 .project_container {
     perspective: 700px;
 }
@@ -731,6 +798,7 @@ nav li {
     justify-content: space-around;
     border-radius: 0 0 5px 5px;
 }
+*/
 
 /******* CONTACT FORM *******/
 

@@ -26,3 +26,14 @@ $subtitle.hide().delay(2850).toggle("fade");
     $close_msg.click(() => {
         $pop_msg.hide(300);
     });
+
+    // SHOW PROJECT DETAILS EVENT LISTENERS
+
+const $details_cta = $(".project_details_cta");
+const $project_specifications = $(".project_specifications");
+
+$details_cta.click( () => {
+
+    $project_specifications.show();
+     
+});
