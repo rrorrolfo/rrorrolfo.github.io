@@ -546,6 +546,11 @@ nav li {
 
  /******** PROJECTS SECTION **********/
 
+ #work_title {
+    margin: 60px 8% -20px;
+    color: var(--yellow-brand);
+ }
+
 #work_gallery {
     display: grid;
     grid-template-columns: 1fr;

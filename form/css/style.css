@@ -1,108 +1,119 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+ font-family: 'Roboto', sans-serif;
 }
 
 body {
-    margin: 0;
+  font: 1em/1.5;
+  background-color: #fff;
+}
+
+header {
+	padding: 30px 0;
+	text-align: center;  
+	background-color: rgb(95, 2, 55);
+	color: #fff;
 }
 
 h1 {
-    background-color: rgb(42, 31, 51);
-    color: #fff;
-    margin-top: 0;
-    padding: 30px 0;
+	font-size: 2em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+	margin: 0;
+}
+
+h2 {
+	font-size: 1.5rem;
+	display: inline-block;
+	
+}
+
+#headings {
+	text-align: center;
+	border-bottom: 5px solid #000;
+	width: 95%;
+	margin: auto;
+	margin-bottom: 5px;
+}
+
+#headings p {
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+
+#headings p,
+label {
+	color: rgb(116, 116, 116);
+	font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ================================= 
+  Form Element Styles
+==================================== */
+
+form {
+	margin: 0;
+	background-color: rgb(248, 248, 248);
+}
+
+fieldset,
+legend,
+button {
+	padding: 0;
+	border: none;
+}
+
+fieldset {
+    margin: 0 2.5%;
+    border:0;
+    padding-left:0;
+    padding-right:0;
+}
+
+label {
+    margin: 10px 0;
+	display: block;
+	margin-bottom: .5em;
+}
+
+button {
+	font-size: 1.25em;	
 }
 
 legend {
     padding: 10px 0;
     font-size: 1.3em;
     width: 100%;
-    border-top: 2px solid #000;
+	border-top: 2px solid #000;
+	font-weight: 700;
+	margin-bottom: 20px;
+	padding-top: 15px;
+
 }
 
-/********** GENERAL RULES ****************/
-
-h1,
-h2,
-legend,
-#submit {
-    font-family: 'Poppins', sans-serif;
+input[type="text"],
+input[type="email"],
+legend {
+	width: 100%;
 }
 
-p,
-input,
-label,
-#state,
-input[type="chechbox"],
-textarea {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1rem;
-    color: rgb(116, 116, 116);
- }
-
-
-
-h1,
-#intro,
-footer {
-    text-align: center;
+input[type="text"],
+input[type="email"] {
+	border-radius: 10px;
 }
 
-#intro,
-#contact_info,
-#newsletter,
-#submit {
-    margin: 0 auto;
-    width: 95%;
-}
-
-/***** INTRO SECTION ********/
-
-#intro {
-    border-bottom: 4px solid #000;
-}
-
-/********** FORM **********/
-form {
-    background-color: rgb(248, 248, 248);
-    padding-bottom: 25px;
-}
-
-fieldset {
-    margin: 0;
-    border: 0;
-    padding-left:0;
-    padding-right:0;
-}
-
-label {
-    font-weight: 700;
-    margin: 10px 0;
-    display: block;
-}
-
-#contact_info {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0;
-    margin-top: 5px;
-}
-
-.input_wrapper > input,
-#state {
-    width: 100%;
-    height: 50px;
-    padding:0 0 0 2%;
-    border-radius: 10px;
-    border: 0;
-    background-color: rgb(235, 235, 235);
-    transition-duration: .8s;
-}
-
-
-#zip_code {
-    width: 50%;
-}
 
 input::placeholder {
     text-align: right;
@@ -110,101 +121,136 @@ input::placeholder {
     font-size: .89em;
 }
 
-#state {
-    font-size: 1em;
+input,
+select {
+	margin-bottom: 1.125em;	
 }
 
-.input_wrapper > input:focus,
-#state:focus,
-textarea:focus {
-    outline: none;
-    border: 2px solid rgb(1, 28, 53);
-    background-color: rgb(218, 218, 218);
+input {
+	font-size: 1em;
+	font-weight: 500;
+	padding: .8em;
+	background-color: rgb(235, 235, 235);
+	border: none;
+	outline: none;
 }
 
-
-
-/********** NEWSLETTER SECTION  *****************/
-
-
-#newsletter > label:not(#news_format):not(#ll_topics):not(#news_topic) {
-    display: inline-block;
-    margin: 10px;
+input:focus {
+	background: #fff;
 }
 
-#news_format,
-#ll_topics {
-    margin-top: 25px;
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
 }
-
-textarea {
-    width: 100%;
-    height: 125px;
-    border-radius: 10px;
-    transition-duration: .8s;
-    background-color: rgb(235, 235, 235);
-}
-
-/********* SUBMIT *************/
 
 #submit {
-    display: block;
-    height: 75px;
+    height: 65px;
     font-size: 1.5rem;
-    color:#fff;
+	color:#fff;
     margin-top: 30px;
     border-radius: 10px;
     background-color: rgb(58, 173, 148);
-    border:0;
+	border:0;
+	margin-bottom: 50px;
+	cursor: pointer;
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
 }
 
-/******* FOOTER ************/
-
-footer {
-    font-style: italic;
-    height: 250px;
+#submit:hover {
+	background: #184c62;
 }
 
+/* ================================= 
+  Page Styles
+==================================== */
 
-/********** Media queries *****/
+.container {
+	margin: auto;
+}
+
+.shirt div {
+	float: left;
+	margin-right: .85em;
+}
+
+.interests input {
+	margin-bottom: 0;
+}
+
+.credit-card {
+	margin-top: 1.25em;
+}
+
+.flag {
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+.total_topay {
+	color: #184c62;
+}
+
+/* ================================= 
+  Helper Classes
+==================================== */
+
+.is-hidden {
+	display: none;
+}
+
+.is-disabled {
+	color: rgb(209, 205, 205);
+}
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* ================================= 
+  Validation messages
+==================================== */
+
+.val_msg {
+	color: rgb(167, 40, 40);
+	font-size: 1rem;
+	margin-top: 0;
+}
+
+.err_decoration {
+	border: 2px solid rgb(167, 40, 40);
+}
+
+.correct_decoration {
+	border: 2px solid rgb(24, 138, 20);
+}
+/* ================================= 
+  Media Queries
+==================================== */
+
 
 @media (min-width: 768px) {
-    
 
-    h1 {
-        font-size: 1.5rem;
-        padding: 15px 0;
-    }
-
-    #intro {
-        margin-top: 40px;
-        padding-bottom: 30px;
-    }
-
-    legend {
-        padding-top: 45px;
-        font-size: 1.5em;
-    }
-
-    main {
-        width: 60%;
-        margin: 0 auto;
-    }
-
-    .input_wrapper {
-        display: flex;
-        margin: 15px 0;
-        justify-content: space-between;
-    }
-
-    .input_wrapper label {
-        width: 30%
-    }
-
-    .input_wrapper input,
-    #zip_code,
-    #state {
-        width: 70%;
-    }
-
+	#headings,
+	form {
+		width: 60%;
+		margin: 10px auto;
+	}
+	
+	.col {
+		float: left;
+	}
+	.col + .col {
+		margin-left: 2.5%;
+	}
+	.col-3 {
+		width: 23%;
+	}
+	.col-6 {
+		width: 49%;
+	}
 }
